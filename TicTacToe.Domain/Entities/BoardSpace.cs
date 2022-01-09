@@ -12,5 +12,6 @@ namespace TicTacToe.Domain.Entities
         public Board Board { get; set; }
         public bool? Status { get; set; }
         public int Position { get; set; }
+        public string Uuid { get; set; }
     }
 }

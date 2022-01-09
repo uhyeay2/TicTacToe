@@ -20,33 +20,21 @@ namespace TicTacToe.ConsoleUI
         }
 
         public int PlayerMove(bool isX)
-            //this method is used to declare a player's movement intentions. Outside this method, it will check if the move is valid and if not, loop through
-            //the method again. If the move is valid, outside the method it will assign board[0] into the space of board[space] assigned here.
+        //this method is used to declare a player's movement intentions. Outside this method, it will check if the move is valid and if not, loop through
+        //the method again. If the move is valid, outside the method it will assign board[0] into the space of board[space] assigned here.
         {
-            char player;
-            if (isX)
-            {
-                player = 'X';
-            }
-            else
-            {
-                player = 'O';
-            }
+            char player = isX ? 'X' : 'O';
+
             Console.WriteLine($"It is {player}'s turn. Which space would you like to move this turn?");
+
             int space = int.Parse(Console.ReadLine());
+
             return space;
         }
 
         public bool PlayerSwitch (bool isX) //used to alternate players. This method will be used to assign the value of board[0] after a turn has been made.
         {
-            if (isX)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return !isX;
         }
 
         public void CheckWinner(bool?[] board)
