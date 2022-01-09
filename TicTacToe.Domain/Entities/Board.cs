@@ -8,5 +8,8 @@ namespace TicTacToe.Domain.Entities
 {
     public class Board
     {
+        public int Id { get; set; }
+        public int BoardSpaceId { get; set; }
+        public string Uuid { get; set; }
     }
 }

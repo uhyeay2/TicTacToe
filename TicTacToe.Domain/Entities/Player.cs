@@ -13,5 +13,7 @@ namespace TicTacToe.Domain.Entities
         [Key]
         public int Id { get; set; }
         string Name { get; set; }
+        public char Token { get; set; }
+        public string Uuid { get; set; }
     }
 }
